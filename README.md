@@ -1,2 +1,2 @@
 # learning-express
-My Simple Web Application for learning Express
+My Simple Web Application for learning MEAN

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.min.js"></script>
+  <script src="javascripts/myApp.js"></script>
+  <title>MyApp</title>
+</head>
+<body ng-app='myApp'>
+	<div class ="container">
+  	<nav class="navbar navbar-inverse" role="navigation" style="padding-left:130px;">
+  	       <ul class="nav navbar-nav">
+  	      <li class="active"><a href="#/" ng-hide="authenticated">Home<span class="sr-only">(current)</span>
+  	      </a></li>
+  	      <li><a href="#/signup" ng-hide="authenticated">Sign Up</a></li>
+          <li><a href="#/login" ng-hide="authenticated">Log in</a></li>
+
+          <li><a href="#/" ng-show="authenticated" ng-click="logout()">{{ current_user }}</a></li>
+          <li><a href="#/login" ng-show="authenticated" ng-click="logout()">Log out</a></li>
+  	    </ul>
+  	</nav>
+	</div>
+  <div class="container" ng-view></div>
+</body>
+</html>
